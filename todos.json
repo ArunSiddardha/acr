@@ -1,0 +1,47 @@
+[
+  {
+    "id": "t4ls4eg7",
+    "title": "Learn Ruby programming",
+    "description": "Complete Ruby tutorial and exercises",
+    "completed": false,
+    "priority": "high",
+    "due_date": "2024-01-15",
+    "created_at": "2025-10-23 21:09:50 +0000"
+  },
+  {
+    "id": "t4ls4e91",
+    "title": "Buy groceries",
+    "description": "Milk, bread, eggs, fruits",
+    "completed": true,
+    "priority": "normal",
+    "due_date": "2024-01-10",
+    "created_at": "2025-10-23 21:09:50 +0000"
+  },
+  {
+    "id": "t4ls4ep1",
+    "title": "Call mom",
+    "description": "",
+    "completed": false,
+    "priority": "normal",
+    "due_date": null,
+    "created_at": "2025-10-23 21:09:50 +0000"
+  },
+  {
+    "id": "t4ls4eb6",
+    "title": "Finish project report",
+    "description": "Complete the quarterly analysis",
+    "completed": false,
+    "priority": "high",
+    "due_date": "2024-01-12",
+    "created_at": "2025-10-23 21:09:50 +0000"
+  },
+  {
+    "id": "t4ls4ez",
+    "title": "Exercise",
+    "description": "30 minutes cardio",
+    "completed": true,
+    "priority": "low",
+    "due_date": null,
+    "created_at": "2025-10-23 21:09:50 +0000"
+  }
+]
