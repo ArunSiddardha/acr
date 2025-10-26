@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include header.html %}
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <style>
+        .hello-world-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: white;
+        }
+        
+        .hello-world-container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .greeting-section, .features-section, .code-section, .interactive-section {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .features-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-section li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .code-section pre {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .code-section code {
+            color: #E8F5E8;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .interactive-section pre {
+            background: rgba(0,0,0,0.4);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #FF9800;
+        }
+        
+        .timestamp {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        h2, h3 {
+            color: #FFE082;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+{% include loader.html %}
+<body>
+    {% include navbar.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+<!-- Main Js File -->
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="{{ site.baseurl }}/assets/js/script.js"></script>
+</html>

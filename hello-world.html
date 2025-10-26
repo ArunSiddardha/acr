@@ -1,0 +1,50 @@
+---
+layout: hello
+title: Hello World
+permalink: /hello-world/
+---
+
+<div class="hello-world-container">
+  <h1>🌍 Hello World Ruby Application</h1>
+  
+  <div class="greeting-section">
+    <h2>Welcome to Our Ruby Hello World App!</h2>
+    <p>This is a simple demonstration of a Ruby-based Hello World application integrated with Jekyll.</p>
+  </div>
+
+  <div class="features-section">
+    <h3>Features:</h3>
+    <ul>
+      <li>✨ Standalone Ruby script execution</li>
+      <li>🌐 Jekyll integration for web display</li>
+      <li>⏰ Dynamic timestamp generation</li>
+      <li>👥 Customizable greetings</li>
+    </ul>
+  </div>
+
+  <div class="code-section">
+    <h3>Ruby Code Example:</h3>
+    <pre><code class="language-ruby">class HelloWorld
+  def initialize(name = "World")
+    @name = name
+  end
+
+  def greet
+    "Hello, #{@name}!"
+  end
+end
+
+hello = HelloWorld.new("Ruby Developer")
+puts hello.greet</code></pre>
+  </div>
+
+  <div class="interactive-section">
+    <h3>Try It Out:</h3>
+    <p>To run the standalone Ruby script, use the following command in your terminal:</p>
+    <pre><code class="language-bash">ruby hello_world.rb</code></pre>
+  </div>
+
+  <div class="timestamp">
+    <p><em>Page generated on: {{ site.time | date: "%B %d, %Y at %I:%M %p" }}</em></p>
+  </div>
+</div>

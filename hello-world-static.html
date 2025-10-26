@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Ruby App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .hello-world-container {
+            max-width: 800px;
+            margin: 2rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hello-world-container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .greeting-section, .features-section, .code-section, .interactive-section {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .features-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-section li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .code-section pre {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .code-section code {
+            color: #E8F5E8;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .interactive-section pre {
+            background: rgba(0,0,0,0.4);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #FF9800;
+        }
+        
+        .timestamp {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        h2, h3 {
+            color: #FFE082;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-output {
+            background: rgba(0,0,0,0.5);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            border-left: 4px solid #2196F3;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world-container">
+        <h1>🌍 Hello World Ruby Application</h1>
+        
+        <div class="greeting-section">
+            <h2>Welcome to Our Ruby Hello World App!</h2>
+            <p>This is a simple demonstration of a Ruby-based Hello World application.</p>
+        </div>
+
+        <div class="features-section">
+            <h3>Features:</h3>
+            <ul>
+                <li>✨ Standalone Ruby script execution</li>
+                <li>🌐 Web-based display</li>
+                <li>⏰ Dynamic timestamp generation</li>
+                <li>👥 Customizable greetings</li>
+            </ul>
+        </div>
+
+        <div class="code-section">
+            <h3>Ruby Code Example:</h3>
+            <pre><code>class HelloWorld
+  def initialize(name = "World")
+    @name = name
+  end
+
+  def greet
+    "Hello, #{@name}!"
+  end
+end
+
+hello = HelloWorld.new("Ruby Developer")
+puts hello.greet</code></pre>
+        </div>
+
+        <div class="interactive-section">
+            <h3>Try It Out:</h3>
+            <p>To run the standalone Ruby script, use the following command in your terminal:</p>
+            <pre><code>ruby hello_world.rb</code></pre>
+            
+            <h4>Expected Output:</h4>
+            <div class="demo-output">========================================
+    HELLO WORLD RUBY APPLICATION
+========================================
+Hello, World!
+Welcome to Ruby programming!
+Current time: 2025-10-26 22:12:46
+
+Hello, Ruby Developer!
+Welcome to Ruby programming!
+Current time: 2025-10-26 22:12:46
+
+Hello, Amazing Coder!
+Welcome to Ruby programming!
+Current time: 2025-10-26 22:12:46
+========================================
+Thanks for using our Hello World app!
+========================================</div>
+        </div>
+
+        <div class="timestamp">
+            <p><em>Page created on: October 26, 2025</em></p>
+        </div>
+    </div>
+</body>
+</html>
