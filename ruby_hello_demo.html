@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Hello World Application</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #cc342d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .output-block {
+            background: #1a202c;
+            color: #68d391;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            border-left: 4px solid #68d391;
+        }
+        .ruby-logo {
+            text-align: center;
+            font-size: 3em;
+            color: #cc342d;
+            margin: 20px 0;
+        }
+        .feature-list {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .feature-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .feature-list li:before {
+            content: "💎 ";
+            margin-right: 10px;
+        }
+        .run-command {
+            background: #4a5568;
+            color: #e2e8f0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ruby-logo">💎</div>
+        <h1>Ruby Hello World Application</h1>
+        
+        <p>Welcome to our Ruby-powered Hello World demonstration! This page showcases a complete Ruby application with object-oriented design and dynamic features.</p>
+        
+        <h2>🚀 Application Features</h2>
+        <div class="feature-list">
+            <ul>
+                <li><strong>Object-Oriented Design:</strong> Uses Ruby classes and methods</li>
+                <li><strong>Dynamic Greetings:</strong> Customizable welcome messages</li>
+                <li><strong>System Information:</strong> Displays Ruby version and platform</li>
+                <li><strong>Time Display:</strong> Shows current timestamp</li>
+                <li><strong>Multiple Instances:</strong> Demonstrates class instantiation</li>
+            </ul>
+        </div>
+
+        <h2>📝 Ruby Source Code</h2>
+        <div class="code-block">#!/usr/bin/env ruby
+
+# Simple Hello World Ruby application
+class HelloWorld
+  def initialize(name = "World")
+    @name = name
+  end
+
+  def greet
+    puts "Hello, #{@name}!"
+    puts "Welcome to Ruby programming!"
+    puts "Current time: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
+  end
+
+  def self.run
+    # Create instances with different greetings
+    default_greeting = new
+    custom_greeting = new("Ruby Developer")
+    
+    puts "=" * 40
+    puts "Ruby Hello World Application"
+    puts "=" * 40
+    
+    default_greeting.greet
+    puts
+    custom_greeting.greet
+    
+    puts "=" * 40
+    puts "Ruby version: #{RUBY_VERSION}"
+    puts "Platform: #{RUBY_PLATFORM}"
+    puts "=" * 40
+  end
+end
+
+# Run the application if this file is executed directly
+if __FILE__ == $0
+  HelloWorld.run
+end</div>
+
+        <h2>▶️ How to Run</h2>
+        <p>To execute the Ruby Hello World application, use the following command:</p>
+        <div class="run-command">ruby hello_world.rb</div>
+
+        <h2>📤 Sample Output</h2>
+        <div class="output-block">========================================
+Ruby Hello World Application
+========================================
+Hello, World!
+Welcome to Ruby programming!
+Current time: 2025-10-26 21:11:40
+
+Hello, Ruby Developer!
+Welcome to Ruby programming!
+Current time: 2025-10-26 21:11:40
+========================================
+Ruby version: 3.2.8
+Platform: x86_64-linux
+========================================</div>
+
+        <h2>🔧 Technical Details</h2>
+        <div class="feature-list">
+            <ul>
+                <li><strong>Ruby Version:</strong> 3.2.8</li>
+                <li><strong>Platform:</strong> x86_64-linux</li>
+                <li><strong>File:</strong> hello_world.rb</li>
+                <li><strong>Execution:</strong> Standalone Ruby script</li>
+                <li><strong>Dependencies:</strong> None (pure Ruby)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Key Concepts Demonstrated</h2>
+        <p>This Hello World application showcases several important Ruby programming concepts:</p>
+        <div class="feature-list">
+            <ul>
+                <li><strong>Class Definition:</strong> Creating a HelloWorld class</li>
+                <li><strong>Instance Variables:</strong> Using @name for object state</li>
+                <li><strong>Instance Methods:</strong> The greet method for behavior</li>
+                <li><strong>Class Methods:</strong> The self.run method</li>
+                <li><strong>String Interpolation:</strong> Using #{} syntax</li>
+                <li><strong>Time Handling:</strong> Working with Time.now</li>
+                <li><strong>Conditional Execution:</strong> Using __FILE__ == $0</li>
+            </ul>
+        </div>
+
+        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #666;">
+            <p>Ruby Hello World Application - Built with ❤️ and Ruby 💎</p>
+            <p>Generated on: October 26, 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
