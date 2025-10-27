@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Notes App
+title: Todo App
 ---
-<div class="notes-container">
-  <h1 class="notes-title">My Notes</h1>
-  
-  <div class="note-input-section">
-    <input type="text" id="noteTitle" class="note-title-input" placeholder="Note Title">
-    <textarea id="noteContent" class="note-content-input" placeholder="Write your note here..." rows="6"></textarea>
-    <button id="addNoteBtn" class="add-note-btn">Add Note</button>
+<div class="todo-container">
+  <h1 class="todo-title">My Todos</h1>
+
+  <div class="todo-input-section">
+    <input type="text" id="todoInput" class="todo-input" placeholder="Enter a new todo...">
+    <button id="addTodoBtn" class="add-todo-btn">Add Todo</button>
   </div>
-  
-  <div class="notes-list" id="notesList">
-    <!-- Notes will be dynamically added here -->
+
+  <div class="todos-list" id="todosList">
+    <!-- Todos will be dynamically added here -->
   </div>
 </div>
 

@@ -4,79 +4,92 @@ $(document).ready(function () {
   if (year) {
     year.innerText = new Date().getFullYear();
   }
-  
-  // Note-taking app functionality
-  loadNotes();
-  
-  const addNoteBtn = document.getElementById('addNoteBtn');
-  if (addNoteBtn) {
-    addNoteBtn.addEventListener('click', addNote);
+
+  // Todo app functionality
+  loadTodos();
+
+  const addTodoBtn = document.getElementById('addTodoBtn');
+  if (addTodoBtn) {
+    addTodoBtn.addEventListener('click', addTodo);
+  }
+
+  const todoInput = document.getElementById('todoInput');
+  if (todoInput) {
+    todoInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        addTodo();
+      }
+    });
   }
 });
 
-// Load notes from localStorage
-function loadNotes() {
-  const notesList = document.getElementById('notesList');
-  if (!notesList) return;
-  
-  const notes = JSON.parse(localStorage.getItem('notes') || '[]');
-  notesList.innerHTML = '';
-  
-  notes.forEach((note, index) => {
-    const noteElement = createNoteElement(note, index);
-    notesList.appendChild(noteElement);
+// Load todos from localStorage
+function loadTodos() {
+  const todosList = document.getElementById('todosList');
+  if (!todosList) return;
+
+  const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+  todosList.innerHTML = '';
+
+  todos.forEach((todo, index) => {
+    const todoElement = createTodoElement(todo, index);
+    todosList.appendChild(todoElement);
   });
 }
 
-// Add a new note
-function addNote() {
-  const titleInput = document.getElementById('noteTitle');
-  const contentInput = document.getElementById('noteContent');
-  
-  const title = titleInput.value.trim();
-  const content = contentInput.value.trim();
-  
-  if (!title || !content) {
-    alert('Please enter both title and content');
+// Add a new todo
+function addTodo() {
+  const todoInput = document.getElementById('todoInput');
+  const text = todoInput.value.trim();
+
+  if (!text) {
+    alert('Please enter a todo');
     return;
   }
-  
-  const notes = JSON.parse(localStorage.getItem('notes') || '[]');
-  notes.push({
-    title: title,
-    content: content,
+
+  const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+  todos.push({
+    text: text,
+    completed: false,
     date: new Date().toLocaleDateString()
   });
-  
-  localStorage.setItem('notes', JSON.stringify(notes));
-  
-  titleInput.value = '';
-  contentInput.value = '';
-  
-  loadNotes();
+
+  localStorage.setItem('todos', JSON.stringify(todos));
+  todoInput.value = '';
+  loadTodos();
 }
 
-// Create note element
-function createNoteElement(note, index) {
-  const noteDiv = document.createElement('div');
-  noteDiv.className = 'note-item';
-  
-  noteDiv.innerHTML = `
-    <div class="note-header">
-      <h3 class="note-item-title">${note.title}</h3>
-      <span class="note-date">${note.date}</span>
+// Create todo element
+function createTodoElement(todo, index) {
+  const todoDiv = document.createElement('div');
+  todoDiv.className = 'todo-item' + (todo.completed ? ' completed' : '');
+
+  todoDiv.innerHTML = `
+    <div class="todo-content">
+      <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''} onchange="toggleTodo(${index})">
+      <span class="todo-text">${todo.text}</span>
     </div>
-    <p class="note-item-content">${note.content}</p>
-    <button class="delete-note-btn" onclick="deleteNote(${index})">Delete</button>
+    <div class="todo-actions">
+      <span class="todo-date">${todo.date}</span>
+      <button class="delete-todo-btn" onclick="deleteTodo(${index})">Delete</button>
+    </div>
   `;
-  
-  return noteDiv;
+
+  return todoDiv;
 }
 
-// Delete a note
-function deleteNote(index) {
-  const notes = JSON.parse(localStorage.getItem('notes') || '[]');
-  notes.splice(index, 1);
-  localStorage.setItem('notes', JSON.stringify(notes));
-  loadNotes();
+// Toggle todo completion
+function toggleTodo(index) {
+  const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+  todos[index].completed = !todos[index].completed;
+  localStorage.setItem('todos', JSON.stringify(todos));
+  loadTodos();
+}
+
+// Delete a todo
+function deleteTodo(index) {
+  const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+  todos.splice(index, 1);
+  localStorage.setItem('todos', JSON.stringify(todos));
+  loadTodos();
 }
