@@ -361,3 +361,144 @@ h1{
   height:3rem;
   background-color: white;
 }
+
+/* Notes App Styles */
+.notes-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notes-title {
+  text-align: center;
+  color: #0e0e0e;
+  margin-bottom: 2rem;
+  font-size: 3em;
+}
+
+.note-input-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.note-title-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: 'Comic Neue';
+  box-sizing: border-box;
+}
+
+.note-content-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Comic Neue';
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.add-note-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0e0e0e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Acme';
+}
+
+.add-note-btn:hover {
+  background-color: #FF8C00;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.note-item-title {
+  margin: 0;
+  color: #0e0e0e;
+  font-size: 1.3rem;
+  font-family: 'Acme';
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.note-item-content {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.delete-note-btn {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Comic Neue';
+}
+
+.delete-note-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .notes-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .notes-container {
+    padding: 1rem;
+  }
+  
+  .notes-title {
+    font-size: 2em;
+  }
+}
