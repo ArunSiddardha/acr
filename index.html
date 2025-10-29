@@ -1,77 +1,53 @@
----
-layout: default
-title: Home
----
-<div class="container-fluid">
-  <h1>Alumni Association</h1>
-  <img class="image" src="/images/alumni.jpg" alt="alumni">
-</div>
-<div class="row-fluid" style="background-image: url(&quot;./content/common/theme_bg.jpg&quot;); clear: both;">
-        
-    <div class="centered-parent span4" style="display: inline-block; padding-left: 3%; padding-top:1.5%; padding-bottom: 1.5%; font-size: 15px">
-      
-      <div><h3 style="color: #000; border-bottom:1px dotted #000">Alumni</h3></div>
-         <span style="border-radius: 6px; color: #000; width: auto;" class="centered"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga recusandae repellendus nam placeat iusto, porro ad dolorum cumque ratione inventore impedit magnam harum, nihil fugit, quia aperiam veritatis quam amet in dignissimos id. Itaque illo illum blanditiis temporibus ratione repellat quam, minus sint, debitis alias repudiandae quaerat quod nam. Necessitatibus eaque temporibus earum ipsam quae distinctio ipsa esse, quaerat ea facilis magnam rerum ut similique, placeat ducimus perspiciatis eum laborum mollitia! Nam sit quaerat velit iure voluptates, necessitatibus eaque iusto, earum a aspernatur quidem vitae asperiores atque quos neque nostrum inventore obcaecati aperiam cum. Quam quidem suscipit necessitatibus, magnam voluptatum reiciendis esse quos aut consequatur provident alias beatae est ex natus enim repudiandae sit saepe! Deleniti, explicabo non possimus pariatur harum laboriosam unde quaerat, amet, nisi illum maiores quae reiciendis! Deserunt quod voluptatibus fuga accusantium eligendi a perferendis autem labore facere hic. Labore facilis assumenda soluta incidunt id ea. Totam repellendus asperiores eius repudiandae voluptatibus id ea dolorum beatae est debitis labore illo doloribus odio quasi, enim cupiditate nobis eveniet porro provident, impedit expedita quis! Ea velit nemo earum maxime at quam dolore facilis dolorem nobis sint hic sunt quaerat ducimus voluptatibus explicabo quis assumenda, doloribus voluptate fugiat ratione veritatis? Exercitationem, aperiam deleniti dolore quaerat et ad voluptate corporis magni dignissimos. Velit esse laborum quidem minus rem quo dolorum obcaecati voluptate corporis, nisi perferendis commodi eveniet pariatur vel consequatur sit repellendus ratione animi nihil assumenda! Temporibus laborum sapiente magni aperiam quas voluptates! Error ad debitis ipsa quo assumenda dolorem necessitatibus!
-    </p><br></span>
-      </div>
-<!-- gallery start -->
-<section id="timeline">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Notes</h1>
+            <button id="newNoteBtn" class="btn-primary">+ New Note</button>
+        </header>
 
-    <div class="tl-item">
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search notes...">
+                </div>
+                <div id="notesList" class="notes-list">
+                    <!-- Notes will be dynamically added here -->
+                </div>
+            </aside>
 
-        <div class="tl-bg" style="background-image: url(/images/students.png)"></div>
+            <main class="editor-section">
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">📄</div>
+                    <h2>No note selected</h2>
+                    <p>Create a new note or select an existing one to get started</p>
+                </div>
 
-        <div class="tl-year">
-            <p class="f2"><u>Who we are</u></p>
-            <br>
-            <p class="f2 heading --sanSerif">For Alumni</p>
+                <div id="editorContainer" class="editor-container" style="display: none;">
+                    <div class="editor-header">
+                        <input type="text" id="noteTitle" placeholder="Note title..." class="note-title-input">
+                        <div class="editor-actions">
+                            <button id="deleteBtn" class="btn-delete" title="Delete note">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <textarea id="noteContent" placeholder="Start typing your note..."></textarea>
+                    <div class="editor-footer">
+                        <span id="charCount" class="char-count">0 characters</span>
+                        <span id="lastSaved" class="last-saved"></span>
+                    </div>
+                </div>
+            </main>
         </div>
-
-        <div class="tl-content">
-            <h1></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam culpa soluta ullam exercitationem excepturi unde enim eveniet reprehenderit placeat odit qui sed, velit perspiciatis porro cum. Itaque neque ab labore iusto nisi alias perferendis accusamus.</p>
-        </div>
-
     </div>
 
-    <div class="tl-item">
-
-        <div class="tl-bg" style="background-image: url(/images/iith.jpg)"></div>
-
-        <div class="tl-year">
-            <p class="f2"><u>Who we are</u></p>
-            <br>
-            <p class="f2 heading--sanSerif">For Institute</p>
-        </div>
-
-        <div class="tl-content">
-            <h1 class="f3 text--accent ttu"></h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat totam nesciunt doloremque doloribus optio quis et ipsam repudiandae! Obcaecati enim nobis non quia? Eius dicta architecto explicabo temporibus quod rem.</p>
-        </div>
-
-    </div>
-
-    <div class="tl-item">
-
-        <div class="tl-bg" style="background-image: url(/images/thirteen.jpg)"></div>
-
-        <div class="tl-year">
-            <p class="f3 text --accent ttu"><u>Who we are</u></p>
-            <br>
-            <p class="f2 heading--sanSerif">For Students</p>
-        </div>
-
-        <div class="tl-content">
-            <h1 class="f3 text--accent ttu"></h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At vitae saepe ipsum iusto odit dolorem explicabo. Voluptate ratione atque provident quis ab ea asperiores placeat nulla amet reprehenderit, perferendis est totam. Eius, alias libero, voluptates veniam nulla vitae animi praesentium adipisci autem, voluptate provident maxime? A ullam sint magnam porro.</p>
-        </div>
-
-    </div>
-
-</section>
-<!-- gallery end -->
-<div class="empty">
-    
-</div>
-
+    <script src="script.js"></script>
+</body>
+</html>
 
