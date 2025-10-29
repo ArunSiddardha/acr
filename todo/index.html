@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App</title>
+    <meta name="description" content="Simple, fast, accessible Todo app with localStorage." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <header class="header">
+        <h1 id="app-title">Todos</h1>
+        <form id="new-todo-form" autocomplete="off">
+          <label for="new-todo" class="sr-only">Add a new todo</label>
+          <input id="new-todo" name="todo" type="text" placeholder="What needs to be done?" maxlength="200" />
+          <button type="submit" aria-label="Add todo">Add</button>
+        </form>
+      </header>
+
+      <section class="controls" aria-label="Bulk controls">
+        <label class="toggle-all">
+          <input id="toggle-all" type="checkbox" />
+          <span>Toggle all</span>
+        </label>
+        <div class="filters" role="tablist" aria-label="Filter todos">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="active" role="tab" aria-selected="false">Active</button>
+          <button class="filter" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+        </div>
+        <button id="clear-completed" class="clear" aria-label="Clear completed todos">Clear completed</button>
+      </section>
+
+      <ul id="todo-list" class="list" role="list" aria-live="polite" aria-relevant="additions removals text"></ul>
+
+      <footer class="footer">
+        <span id="items-left">0 items left</span>
+        <span class="hint">Double‑click an item to edit</span>
+      </footer>
+    </main>
+
+    <template id="todo-item-template">
+      <li class="item" role="listitem">
+        <label class="checkbox">
+          <input type="checkbox" class="toggle" />
+          <span class="checkmark" aria-hidden="true"></span>
+        </label>
+        <div class="content" tabindex="0"></div>
+        <input class="edit" type="text" aria-label="Edit todo" />
+        <button class="destroy" aria-label="Delete todo">×</button>
+      </li>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+  </html>
+
