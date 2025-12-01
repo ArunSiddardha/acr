@@ -1,0 +1,19 @@
+current directory: /vercel/sandbox/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/usr/bin/ruby3.2 -I/usr/share/ruby3.2-rubygems extconf.rb
+creating Makefile
+
+current directory: /vercel/sandbox/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251201-5750-ot4gys sitelibdir\=./.gem.20251201-5750-ot4gys clean
+
+current directory: /vercel/sandbox/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251201-5750-ot4gys sitelibdir\=./.gem.20251201-5750-ot4gys
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /vercel/sandbox/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251201-5750-ot4gys sitelibdir\=./.gem.20251201-5750-ot4gys install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20251201-5750-ot4gys
+
+current directory: /vercel/sandbox/vendor/bundle/ruby/3.2.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251201-5750-ot4gys sitelibdir\=./.gem.20251201-5750-ot4gys clean
