@@ -1,0 +1,617 @@
+{
+  "dashboard_sample": {
+    "file_name": "dashboard_sample_10.xls",
+    "total_rows": 10,
+    "total_columns": 5,
+    "columns": [
+      "Date",
+      "Product",
+      "Region",
+      "Sales",
+      "Profit"
+    ],
+    "data_types": {
+      "Date": "datetime64[ns]",
+      "Product": "object",
+      "Region": "object",
+      "Sales": "int64",
+      "Profit": "int64"
+    },
+    "missing_values": {
+      "Date": 0,
+      "Product": 0,
+      "Region": 0,
+      "Sales": 0,
+      "Profit": 0
+    },
+    "date_range": {
+      "start": "2025-01-01 00:00:00",
+      "end": "2025-01-10 00:00:00"
+    },
+    "products": {
+      "unique_products": [
+        "Tablet",
+        "Keyboard",
+        "Printer",
+        "Headphones",
+        "Laptop",
+        "Mobile"
+      ],
+      "product_count": {
+        "Tablet": 2,
+        "Keyboard": 2,
+        "Headphones": 2,
+        "Laptop": 2,
+        "Printer": 1,
+        "Mobile": 1
+      }
+    },
+    "regions": {
+      "unique_regions": [
+        "West",
+        "South",
+        "Central"
+      ],
+      "region_count": {
+        "West": 4,
+        "Central": 4,
+        "South": 2
+      }
+    },
+    "sales_statistics": {
+      "total_sales": 11969,
+      "average_sales": 1196.9,
+      "min_sales": 415,
+      "max_sales": 1997,
+      "std_sales": 560.2948529321167
+    },
+    "profit_statistics": {
+      "total_profit": 2432,
+      "average_profit": 243.2,
+      "min_profit": 73,
+      "max_profit": 476,
+      "std_profit": 125.67577332167087,
+      "profit_margin_avg": 20.319157824379648
+    },
+    "sales_by_product": {
+      "Headphones": 2585,
+      "Keyboard": 3931,
+      "Laptop": 1149,
+      "Mobile": 1083,
+      "Printer": 1689,
+      "Tablet": 1532
+    },
+    "profit_by_product": {
+      "Headphones": 647,
+      "Keyboard": 755,
+      "Laptop": 192,
+      "Mobile": 211,
+      "Printer": 277,
+      "Tablet": 350
+    },
+    "sales_by_region": {
+      "Central": 4303,
+      "South": 3080,
+      "West": 4586
+    },
+    "profit_by_region": {
+      "Central": 1021,
+      "South": 687,
+      "West": 724
+    },
+    "top_performers": {
+      "highest_sales_transaction": {
+        "Date": "2025-01-02 00:00:00",
+        "Product": "Keyboard",
+        "Region": "South",
+        "Sales": 1997,
+        "Profit": 476
+      },
+      "highest_profit_transaction": {
+        "Date": "2025-01-02 00:00:00",
+        "Product": "Keyboard",
+        "Region": "South",
+        "Sales": 1997,
+        "Profit": 476
+      }
+    }
+  },
+  "nvidia_stock": {
+    "file_name": "NVidia_stock_history.csv",
+    "total_rows": 6442,
+    "total_columns": 12,
+    "columns": [
+      "Date",
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Volume",
+      "Dividends",
+      "Stock Splits",
+      "Daily_Return",
+      "Price_Range",
+      "Year",
+      "Month"
+    ],
+    "date_range": {
+      "start": "1999-01-22 05:00:00+00:00",
+      "end": "2024-08-28 04:00:00+00:00",
+      "total_trading_days": 6442
+    },
+    "price_statistics": {
+      "opening_price": {
+        "first": 0.0401286768440467,
+        "last": 128.1199951171875,
+        "min": 0.0320075383611819,
+        "max": 139.8000030517578,
+        "average": 6.5404595394159335
+      },
+      "closing_price": {
+        "first": 0.0376209802925586,
+        "last": 125.1750030517578,
+        "min": 0.0312911942601203,
+        "max": 135.5800018310547,
+        "average": 6.542479275661304
+      },
+      "high_price": {
+        "all_time_high": 140.75999450683594,
+        "date_of_high": "2024-06-20 04:00:00+00:00"
+      },
+      "low_price": {
+        "all_time_low": 0.0305739212723556,
+        "date_of_low": "1999-04-26 04:00:00+00:00"
+      }
+    },
+    "volume_statistics": {
+      "total_volume": 3899218196982,
+      "average_volume": 605280688.7584602,
+      "max_volume": 9230856000,
+      "date_of_max_volume": "2003-05-09 04:00:00+00:00"
+    },
+    "returns_analysis": {
+      "total_return_percent": 332626.5852147859,
+      "average_daily_return": 0.1972493163313387,
+      "volatility_std": 3.789997200180063,
+      "best_day": {
+        "return": 42.4147977455577,
+        "date": "2000-03-07 05:00:00+00:00"
+      },
+      "worst_day": {
+        "return": -35.23360025525747,
+        "date": "2004-08-06 04:00:00+00:00"
+      }
+    },
+    "yearly_performance": {
+      "1999": {
+        "opening_price": 0.0376209802925586,
+        "closing_price": 0.0896919295191764,
+        "yearly_return_percent": 138.4093365502158,
+        "average_price": 0.044651289209411686,
+        "total_volume": 61501584000,
+        "trading_days": 239
+      },
+      "2000": {
+        "opening_price": 0.0894534364342689,
+        "closing_price": 0.1252225935459137,
+        "yearly_return_percent": 39.98634209869429,
+        "average_price": 0.2013044258254388,
+        "total_volume": 111301512000,
+        "trading_days": 252
+      },
+      "2001": {
+        "opening_price": 0.1144148930907249,
+        "closing_price": 0.5113540291786194,
+        "yearly_return_percent": 346.9296044992525,
+        "average_price": 0.3022618516378345,
+        "total_volume": 276012828000,
+        "trading_days": 248
+      },
+      "2002": {
+        "opening_price": 0.5144110321998596,
+        "closing_price": 0.0879776701331138,
+        "yearly_return_percent": -82.89739826207058,
+        "average_price": 0.2204726438910242,
+        "total_volume": 319400388000,
+        "trading_days": 252
+      },
+      "2003": {
+        "opening_price": 0.0940918773412704,
+        "closing_price": 0.1773301810026168,
+        "yearly_return_percent": 88.4649196225959,
+        "average_price": 0.1352988207446677,
+        "total_volume": 244966200000,
+        "trading_days": 252
+      },
+      "2004": {
+        "opening_price": 0.1764129996299743,
+        "closing_price": 0.1800819039344787,
+        "yearly_return_percent": 2.079724460328836,
+        "average_price": 0.14826770939878997,
+        "total_volume": 171998196000,
+        "trading_days": 252
+      },
+      "2005": {
+        "opening_price": 0.1802350580692291,
+        "closing_price": 0.2794487774372101,
+        "yearly_return_percent": 55.04684850484113,
+        "average_price": 0.21815832609695102,
+        "total_volume": 155516772000,
+        "trading_days": 252
+      },
+      "2006": {
+        "opening_price": 0.2921368479728699,
+        "closing_price": 0.5657757520675659,
+        "yearly_return_percent": 93.66805522599063,
+        "average_price": 0.41495258601538215,
+        "total_volume": 154058556000,
+        "trading_days": 251
+      },
+      "2007": {
+        "opening_price": 0.551558792591095,
+        "closing_price": 0.7801015973091125,
+        "yearly_return_percent": 41.43580118528736,
+        "average_price": 0.6357423390050333,
+        "total_volume": 152062186000,
+        "trading_days": 251
+      },
+      "2008": {
+        "opening_price": 0.7569413781166077,
+        "closing_price": 0.1850505322217941,
+        "yearly_return_percent": -75.55285817744173,
+        "average_price": 0.36564360076024127,
+        "total_volume": 204699404000,
+        "trading_days": 253
+      },
+      "2009": {
+        "opening_price": 0.1997261196374893,
+        "closing_price": 0.4283449351787567,
+        "yearly_return_percent": 114.46615793478566,
+        "average_price": 0.2717484732468923,
+        "total_volume": 193517952000,
+        "trading_days": 252
+      },
+      "2010": {
+        "opening_price": 0.4239882528781891,
+        "closing_price": 0.3531322777271271,
+        "yearly_return_percent": -16.71177790187946,
+        "average_price": 0.31101270031834405,
+        "total_volume": 186812132000,
+        "trading_days": 252
+      },
+      "2011": {
+        "opening_price": 0.3627632558345794,
+        "closing_price": 0.3178190588951111,
+        "yearly_return_percent": -12.389401687353626,
+        "average_price": 0.3872426122663513,
+        "total_volume": 230766636000,
+        "trading_days": 252
+      },
+      "2012": {
+        "opening_price": 0.3219466507434845,
+        "closing_price": 0.2829437553882599,
+        "yearly_return_percent": -12.11470759678774,
+        "average_price": 0.3099470739364624,
+        "total_volume": 120775680000,
+        "trading_days": 250
+      },
+      "2013": {
+        "opening_price": 0.2935598492622375,
+        "closing_price": 0.3777973055839538,
+        "yearly_return_percent": 28.69515587142397,
+        "average_price": 0.33121196511718964,
+        "total_volume": 89147376000,
+        "trading_days": 252
+      },
+      "2014": {
+        "opening_price": 0.3740240037441253,
+        "closing_price": 0.4812979102134704,
+        "yearly_return_percent": 28.681021911826964,
+        "average_price": 0.441418770286772,
+        "total_volume": 71556936000,
+        "trading_days": 252
+      },
+      "2015": {
+        "opening_price": 0.4832182228565216,
+        "closing_price": 0.8043233752250671,
+        "yearly_return_percent": 66.45137479922583,
+        "average_price": 0.5744547225416653,
+        "total_volume": 78187564000,
+        "trading_days": 252
+      },
+      "2016": {
+        "opening_price": 0.789925754070282,
+        "closing_price": 2.629818916320801,
+        "yearly_return_percent": 232.91975894823378,
+        "average_price": 1.3205664318705361,
+        "total_volume": 111598604000,
+        "trading_days": 252
+      },
+      "2017": {
+        "opening_price": 2.513282537460327,
+        "closing_price": 4.78594970703125,
+        "yearly_return_percent": 90.426250757603,
+        "average_price": 3.6992032774891035,
+        "total_volume": 172152468000,
+        "trading_days": 251
+      },
+      "2018": {
+        "opening_price": 4.930642127990723,
+        "closing_price": 3.3111486434936523,
+        "yearly_return_percent": -32.84548832500702,
+        "average_price": 5.75420467407105,
+        "total_volume": 137569608000,
+        "trading_days": 251
+      },
+      "2019": {
+        "opening_price": 3.378611326217652,
+        "closing_price": 5.858846664428711,
+        "yearly_return_percent": 73.40990421019151,
+        "average_price": 4.33925123441787,
+        "total_volume": 115012716000,
+        "trading_days": 252
+      },
+      "2020": {
+        "opening_price": 5.973633289337158,
+        "closing_price": 13.023961067199709,
+        "yearly_return_percent": 118.0241142429562,
+        "average_price": 9.861081619036527,
+        "total_volume": 121656380000,
+        "trading_days": 253
+      },
+      "2021": {
+        "opening_price": 13.082322120666504,
+        "closing_price": 29.366701126098636,
+        "yearly_return_percent": 124.4762119081845,
+        "average_price": 19.486443394706363,
+        "total_volume": 90608822000,
+        "trading_days": 252
+      },
+      "2022": {
+        "opening_price": 30.075634002685547,
+        "closing_price": 14.605633735656738,
+        "yearly_return_percent": -51.436988047026524,
+        "average_price": 18.547049157647972,
+        "total_volume": 136333969000,
+        "trading_days": 251
+      },
+      "2023": {
+        "opening_price": 14.306804656982422,
+        "closing_price": 49.51560974121094,
+        "yearly_return_percent": 246.0983142524763,
+        "average_price": 36.55814344024658,
+        "total_volume": 118389365000,
+        "trading_days": 250
+      },
+      "2024": {
+        "opening_price": 48.16178512573242,
+        "closing_price": 125.1750030517578,
+        "yearly_return_percent": 159.9052396520865,
+        "average_price": 95.2488485818886,
+        "total_volume": 73614362982,
+        "trading_days": 166
+      }
+    },
+    "dividends_and_splits": {
+      "total_dividends": 0.16365000000000002,
+      "dividend_payments": 47,
+      "stock_splits": 6
+    }
+  },
+  "employment_data": {
+    "file_name": "machine-readable-business-employment-data-jun-2025-quarter.csv",
+    "total_rows": 24898,
+    "total_columns": 14,
+    "columns": [
+      "Series_reference",
+      "Period",
+      "Data_value",
+      "Suppressed",
+      "STATUS",
+      "UNITS",
+      "Magnitude",
+      "Subject",
+      "Group",
+      "Series_title_1",
+      "Series_title_2",
+      "Series_title_3",
+      "Series_title_4",
+      "Series_title_5"
+    ],
+    "data_types": {
+      "Series_reference": "object",
+      "Period": "float64",
+      "Data_value": "float64",
+      "Suppressed": "object",
+      "STATUS": "object",
+      "UNITS": "object",
+      "Magnitude": "int64",
+      "Subject": "object",
+      "Group": "object",
+      "Series_title_1": "object",
+      "Series_title_2": "object",
+      "Series_title_3": "object",
+      "Series_title_4": "float64",
+      "Series_title_5": "float64"
+    },
+    "missing_values": {
+      "Series_reference": 0,
+      "Period": 0,
+      "Data_value": 2839,
+      "Suppressed": 22059,
+      "STATUS": 0,
+      "UNITS": 0,
+      "Magnitude": 0,
+      "Subject": 0,
+      "Group": 0,
+      "Series_title_1": 0,
+      "Series_title_2": 0,
+      "Series_title_3": 0,
+      "Series_title_4": 24898,
+      "Series_title_5": 24898
+    },
+    "unique_values": {
+      "series_references": 462,
+      "periods": 57,
+      "industries": 3,
+      "data_types": 116
+    },
+    "period_range": {
+      "start": 2011.06,
+      "end": 2025.06
+    },
+    "industries": [
+      "Filled jobs",
+      "Total earnings",
+      "Filled jobs (workplace location based)"
+    ],
+    "data_type_categories": [
+      "Agriculture, Forestry and Fishing",
+      "Mining",
+      "Manufacturing",
+      "Electricity, Gas, Water and Waste Services",
+      "Construction",
+      "Wholesale Trade",
+      "Retail Trade",
+      "Accommodation and Food Services",
+      "Transport, Postal and Warehousing",
+      "Information Media and Telecommunications",
+      "Financial and Insurance Services",
+      "Rental, Hiring and Real Estate Services",
+      "Professional, Scientific and Technical Services",
+      "Administrative and Support Services",
+      "Public Administration and Safety",
+      "Education and Training",
+      "Health Care and Social Assistance",
+      "Arts and Recreation Services",
+      "Other Services",
+      "Total Industry",
+      "Male",
+      "Female",
+      "15-19",
+      "20-24",
+      "25-29",
+      "30-34",
+      "35-39",
+      "40-44",
+      "45-49",
+      "50-54",
+      "55-59",
+      "60-64",
+      "65 +",
+      "Northland",
+      "Auckland",
+      "Waikato",
+      "Bay of Plenty",
+      "Gisborne",
+      "Hawke's Bay",
+      "Taranaki",
+      "Manawatu-Whanganui",
+      "Wellington",
+      "Tasman",
+      "Nelson",
+      "Marlborough",
+      "West Coast",
+      "Canterbury",
+      "Otago",
+      "Southland",
+      "Far North District",
+      "Whangarei District",
+      "Kaipara District",
+      "Thames-Coromandel District",
+      "Hauraki District",
+      "Waikato District",
+      "Matamata-Piako District",
+      "Hamilton City",
+      "Waipa District",
+      "Otorohanga District",
+      "South Waikato District",
+      "Waitomo District",
+      "Taupo District",
+      "Western Bay of Plenty District",
+      "Tauranga City",
+      "Rotorua District",
+      "Whakatane District",
+      "Kawerau District",
+      "Opotiki District",
+      "Gisborne District",
+      "Wairoa District",
+      "Hastings District",
+      "Napier City",
+      "Central Hawke's Bay District",
+      "New Plymouth District",
+      "Stratford District",
+      "South Taranaki District",
+      "Ruapehu District",
+      "Whanganui District",
+      "Rangitikei District",
+      "Manawatu District",
+      "Palmerston North City",
+      "Tararua District",
+      "Horowhenua District",
+      "Kapiti Coast District",
+      "Porirua City",
+      "Upper Hutt City",
+      "Lower Hutt City",
+      "Wellington City",
+      "Masterton District",
+      "Carterton District",
+      "South Wairarapa District",
+      "Tasman District",
+      "Nelson City",
+      "Marlborough District",
+      "Kaikoura District",
+      "Buller District",
+      "Grey District",
+      "Westland District",
+      "Hurunui District",
+      "Waimakariri District",
+      "Christchurch City",
+      "Selwyn District",
+      "Ashburton District",
+      "Timaru District",
+      "Mackenzie District",
+      "Waimate District",
+      "Chatham Islands Territory",
+      "Waitaki District",
+      "Central Otago District",
+      "Queenstown-Lakes District",
+      "Dunedin City",
+      "Clutha District",
+      "Southland District",
+      "Gore District",
+      "Invercargill City",
+      "Area Outside Territorial Authority"
+    ],
+    "employment_statistics": {
+      "total_records": 24898,
+      "average_filled_jobs": 73580.10963435048,
+      "max_filled_jobs": 2321295,
+      "min_filled_jobs": 1
+    },
+    "industry_statistics": {
+      "Filled jobs": {
+        "total_records": 10717,
+        "average_jobs": 128975.26063829787,
+        "max_jobs": 2321295,
+        "min_jobs": 88,
+        "latest_value": 92128
+      },
+      "Total earnings": {
+        "total_records": 9421,
+        "average_jobs": 1612.2641294823052,
+        "max_jobs": 46692,
+        "min_jobs": 1,
+        "latest_value": 1444
+      },
+      "Filled jobs (workplace location based)": {
+        "total_records": 4760,
+        "average_jobs": 48688.322764743185,
+        "max_jobs": 828373,
+        "min_jobs": 241,
+        "latest_value": 60450
+      }
+    },
+    "time_series_summary": {}
+  }
+}
