@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us - Alumni</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="menu-container">
+        <input type="checkbox" aria-label="Toggle menu" />
+        
+        <a href="#" class="menu-logo">
+            <img src="https://pr.iith.ac.in/assets/images/logo/HorizontalCrystalLogo.png" alt="Alumni Website"/>
+        </a>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#alumni">Alumni</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#signup">Sign-up</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p class="contact-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+
+            <div class="row contact-content">
+                <!-- Contact Form -->
+                <div class="col-md-7">
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                            <!-- Honeypot for spam protection -->
+                            <input type="text" name="_gotcha" style="display:none">
+                            
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name">Name <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-control" 
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="nameError"
+                                >
+                                <span class="error-message" id="nameError" role="alert"></span>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-control" 
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="emailError"
+                                >
+                                <span class="error-message" id="emailError" role="alert"></span>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    class="form-control"
+                                    aria-describedby="subjectError"
+                                >
+                                <span class="error-message" id="subjectError" role="alert"></span>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-control" 
+                                    rows="6" 
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="messageError"
+                                ></textarea>
+                                <span class="error-message" id="messageError" role="alert"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                                <button type="submit" class="btn-submit" id="submitBtn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <span class="spinner"></span> Sending...
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- Success Message -->
+                            <div class="alert alert-success" id="successMessage" style="display: none;" role="alert">
+                                <strong>Success!</strong> Your message has been sent successfully. We'll get back to you soon.
+                            </div>
+
+                            <!-- Error Message -->
+                            <div class="alert alert-error" id="errorMessage" style="display: none;" role="alert">
+                                <strong>Error!</strong> Something went wrong. Please try again later.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-5">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Feel free to reach out to us through the contact form or connect with us on social media.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-item-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:alumni@example.com">alumni@example.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-item-content">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-item-content">
+                                    <h4>Address</h4>
+                                    <p>IIT Hyderabad<br>Kandi, Sangareddy<br>Telangana, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="empty"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="icons">
+           <a href="#"><i class="fab fa-facebook"></i></a>
+           <a href="#"><i class="fab fa-linkedin"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+            <p class="company-name">
+                 &copy; 2023, ALL Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/contact.js"></script>
+</body>
+</html>
