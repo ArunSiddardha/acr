@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="/assets/css/notes.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="notes-container">
+        <div class="notes-header">
+            <h1>My Notes</h1>
+            <div class="header-actions">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search notes...">
+                <button id="newNoteBtn" class="btn btn-primary">
+                    <span>+</span> New Note
+                </button>
+                <button id="themeToggle" class="btn btn-secondary theme-toggle">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="notes-content">
+            <div class="notes-sidebar">
+                <div class="notes-filter">
+                    <button class="filter-btn active" data-filter="all">All Notes</button>
+                    <button class="filter-btn" data-filter="recent">Recent</button>
+                    <button class="filter-btn" data-filter="favorites">Favorites</button>
+                </div>
+                <div id="notesList" class="notes-list">
+                    <!-- Notes will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <div class="notes-editor">
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-state-icon">📝</div>
+                    <h2>No Note Selected</h2>
+                    <p>Select a note from the list or create a new one to get started.</p>
+                </div>
+
+                <div id="editorContainer" class="editor-container" style="display: none;">
+                    <div class="editor-header">
+                        <input type="text" id="noteTitle" class="note-title" placeholder="Note Title">
+                        <div class="editor-actions">
+                            <button id="favoriteBtn" class="btn-icon" title="Toggle Favorite">
+                                <span id="favoriteIcon">☆</span>
+                            </button>
+                            <button id="deleteBtn" class="btn-icon btn-danger" title="Delete Note">
+                                <span>🗑️</span>
+                            </button>
+                        </div>
+                    </div>
+                    <textarea id="noteContent" class="note-content" placeholder="Start typing your note..."></textarea>
+                    <div class="editor-footer">
+                        <span id="lastSaved" class="last-saved">Auto-saved</span>
+                        <span id="charCount" class="char-count">0 characters</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/notes.js"></script>
+</body>
+</html>
