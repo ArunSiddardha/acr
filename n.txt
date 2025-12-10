@@ -1,0 +1,2 @@
+This is a basic text file added to the repository.
+It contains some sample content for demonstration purposes.
