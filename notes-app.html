@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="notes-app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Notes</h1>
+            <button id="addNoteBtn" class="btn-primary">+ New Note</button>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Search notes..." />
+        </div>
+
+        <div class="notes-grid" id="notesGrid">
+            <!-- Notes will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Modal for creating/editing notes -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">New Note</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="noteTitle" placeholder="Note Title" class="input-title" />
+                <textarea id="noteContent" placeholder="Write your note here..." class="input-content"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteNoteBtn" class="btn-delete">Delete</button>
+                <div>
+                    <button id="cancelBtn" class="btn-secondary">Cancel</button>
+                    <button id="saveNoteBtn" class="btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="notes-app.js"></script>
+</body>
+</html>
