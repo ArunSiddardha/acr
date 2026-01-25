@@ -35,6 +35,91 @@ document.body.addEventListener("scroll", function(event) {
   document.documentElement.style.setProperty('--headerScale', scale);
 });
 
+// Contract Form Validation
+document.addEventListener('DOMContentLoaded', function() {
+    const contractForm = document.getElementById('contractForm');
+    
+    if (contractForm) {
+        contractForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (contractForm.checkValidity()) {
+                // Show success modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            } else {
+                // Show validation feedback
+                contractForm.classList.add('was-validated');
+            }
+        });
+        
+        // Real-time validation
+        const inputs = contractForm.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (input.checkValidity()) {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                } else if (input.value) {
+                    input.classList.remove('is-valid');
+                    input.classList.add('is-invalid');
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                if (input.classList.contains('is-invalid') && input.checkValidity()) {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                }
+            });
+        });
+        
+        // Date validation
+        const startDate = document.getElementById('startDate');
+        const endDate = document.getElementById('endDate');
+        
+        if (startDate && endDate) {
+            startDate.addEventListener('change', function() {
+                if (endDate.value && new Date(endDate.value) < new Date(startDate.value)) {
+                    endDate.setCustomValidity('End date must be after start date');
+                } else {
+                    endDate.setCustomValidity('');
+                }
+            });
+            
+            endDate.addEventListener('change', function() {
+                if (startDate.value && new Date(endDate.value) < new Date(startDate.value)) {
+                    endDate.setCustomValidity('End date must be after start date');
+                } else {
+                    endDate.setCustomValidity('');
+                }
+            });
+        }
+    }
+});
+
+// Reset form function
+function resetForm() {
+    const contractForm = document.getElementById('contractForm');
+    if (contractForm) {
+        contractForm.reset();
+        contractForm.classList.remove('was-validated');
+        
+        // Remove validation classes
+        const inputs = contractForm.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.classList.remove('is-valid', 'is-invalid');
+        });
+        
+        // Close modal
+        const successModal = bootstrap.Modal.getInstance(document.getElementById('successModal'));
+        if (successModal) {
+            successModal.hide();
+        }
+    }
+}
+
 
 
 

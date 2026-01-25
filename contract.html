@@ -1,0 +1,147 @@
+---
+layout: default
+title: Contract Form
+---
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow" data-aos="fade-up">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0 text-center">Contract Form</h2>
+                </div>
+                <div class="card-body">
+                    <form id="contractForm" novalidate>
+                        <!-- Personal Information -->
+                        <fieldset class="mb-4">
+                            <legend class="h4 text-primary mb-3">Personal Information</legend>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    <div class="invalid-feedback">Please provide your first name.</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    <div class="invalid-feedback">Please provide your last name.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <div class="invalid-feedback">Please provide your phone number.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address *</label>
+                                <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+                                <div class="invalid-feedback">Please provide your address.</div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Contract Details -->
+                        <fieldset class="mb-4">
+                            <legend class="h4 text-primary mb-3">Contract Details</legend>
+                            
+                            <div class="mb-3">
+                                <label for="contractType" class="form-label">Contract Type *</label>
+                                <select class="form-select" id="contractType" name="contractType" required>
+                                    <option value="">Choose...</option>
+                                    <option value="employment">Employment</option>
+                                    <option value="service">Service Agreement</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="lease">Lease Agreement</option>
+                                    <option value="sales">Sales Contract</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a contract type.</div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="startDate" class="form-label">Start Date *</label>
+                                    <input type="date" class="form-control" id="startDate" name="startDate" required>
+                                    <div class="invalid-feedback">Please provide a start date.</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="endDate" class="form-label">End Date</label>
+                                    <input type="date" class="form-control" id="endDate" name="endDate">
+                                    <small class="text-muted">Leave blank for ongoing contracts</small>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contractValue" class="form-label">Contract Value ($)</label>
+                                <input type="number" class="form-control" id="contractValue" name="contractValue" min="0" step="0.01">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Contract Description *</label>
+                                <textarea class="form-control" id="description" name="description" rows="4" required placeholder="Please provide a detailed description of the contract terms and conditions..."></textarea>
+                                <div class="invalid-feedback">Please provide a contract description.</div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Terms and Conditions -->
+                        <fieldset class="mb-4">
+                            <legend class="h4 text-primary mb-3">Terms and Conditions</legend>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <label class="form-check-label" for="agreeTerms">
+                                    I agree to the terms and conditions outlined in this contract *
+                                </label>
+                                <div class="invalid-feedback">You must agree to the terms to submit this form.</div>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="electronicSignature" name="electronicSignature" required>
+                                <label class="form-check-label" for="electronicSignature">
+                                    I understand that this electronic signature has the same legal effect as a handwritten signature *
+                                </label>
+                                <div class="invalid-feedback">You must acknowledge the electronic signature.</div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Contract Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="successModalLabel">Contract Submitted Successfully!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for submitting your contract form. We have received your submission and will process it shortly.</p>
+                <p>You will receive a confirmation email shortly with the details of your submission.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="resetForm()">Submit Another Contract</button>
+            </div>
+        </div>
+    </div>
+</div>
