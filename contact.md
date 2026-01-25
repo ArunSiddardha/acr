@@ -1,0 +1,74 @@
+---
+layout: default
+title: Contact
+---
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="contact-form-container" data-aos="fade-up">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center mb-5">Have questions or want to get in touch? Fill out the form below and we'll get back to you soon.</p>
+        
+        <form id="contactForm" class="contact-form">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject *</label>
+            <select class="form-select" id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="alumni">Alumni Services</option>
+              <option value="events">Events & Reunions</option>
+              <option value="donations">Donations</option>
+              <option value="technical">Technical Support</option>
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+            <label class="form-check-label" for="newsletter">
+              I would like to receive alumni newsletters and updates
+            </label>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </div>
+        </form>
+        
+        <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+          <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+        </div>
+        
+        <div id="errorMessage" class="alert alert-danger mt-4" style="display: none;">
+          <strong>Oops!</strong> There was an error sending your message. Please try again later.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
