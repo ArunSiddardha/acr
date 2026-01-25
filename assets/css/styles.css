@@ -361,3 +361,249 @@ h1{
   height:3rem;
   background-color: white;
 }
+
+/* Contact Form Styles */
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.contact-title {
+  font-family: 'Acme', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #0e0e0e;
+  margin-bottom: 20px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form-wrapper {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border: 1px solid #e9ecef;
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  color: #0e0e0e;
+  margin-bottom: 8px;
+  font-family: 'Acme', sans-serif;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+  background-color: #fff;
+}
+
+.contact-form .form-control.is-invalid {
+  border-color: #dc3545;
+  background-color: #fff;
+}
+
+.contact-form .invalid-feedback {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #0e0e0e, #2a2a2a);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Acme', sans-serif;
+  min-width: 150px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #FF8C00, #ff6b00);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-reset {
+  background: #6c757d;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.contact-info-row {
+  margin-top: 60px;
+}
+
+.contact-info-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #FF8C00;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0e0e0e, #2a2a2a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.contact-info-card h5 {
+  font-family: 'Acme', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0e0e0e;
+  margin-bottom: 10px;
+}
+
+.contact-info-card p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.contact-info-card .small {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.alert {
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 40px 15px;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form-wrapper {
+    padding: 25px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn-submit,
+  .btn-reset {
+    width: 100%;
+  }
+  
+  .contact-info-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Form Validation Animation */
+.contact-form .form-control.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Loading State */
+.btn-submit .btn-spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.2em;
+}

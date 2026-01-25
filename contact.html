@@ -1,0 +1,126 @@
+---
+layout: default
+title: Contact
+---
+<div class="container contact-container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h1 class="contact-title" data-aos="fade-up">Get in Touch</h1>
+      <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+      </p>
+    </div>
+  </div>
+  
+  <div class="row contact-row">
+    <div class="col-lg-8 mx-auto">
+      <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="200">
+        <form id="contactForm" class="contact-form">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+              <div class="invalid-feedback">Please provide your first name.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+              <div class="invalid-feedback">Please provide your last name.</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Optional">
+              <div class="invalid-feedback">Please provide a valid phone number.</div>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject *</label>
+            <select class="form-select" id="subject" name="subject" required>
+              <option value="">Select a subject...</option>
+              <option value="general">General Inquiry</option>
+              <option value="alumni">Alumni Services</option>
+              <option value="events">Events & Reunions</option>
+              <option value="donations">Donations & Support</option>
+              <option value="technical">Technical Support</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please select a subject.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea class="form-control" id="message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+            <div class="invalid-feedback">Please provide a message (minimum 10 characters).</div>
+            <div class="character-count">
+              <span id="charCount">0</span> / 500 characters
+            </div>
+          </div>
+          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+            <label class="form-check-label" for="newsletter">
+              I'd like to receive alumni news and updates
+            </label>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner d-none">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Sending...
+              </span>
+            </button>
+            <button type="reset" class="btn btn-secondary btn-reset">Clear Form</button>
+          </div>
+        </form>
+        
+        <div id="formAlert" class="alert d-none" role="alert"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row contact-info-row mt-5">
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h5>Email</h5>
+        <p>alumni@iith.ac.in</p>
+        <p class="small">For general inquiries</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h5>Phone</h5>
+        <p>+91 40 2301 6000</p>
+        <p class="small">Mon-Fri, 9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h5>Address</h5>
+        <p>IIT Hyderabad</p>
+        <p class="small">Kandi, Sangareddy, Telangana 502285</p>
+      </div>
+    </div>
+  </div>
+</div>
