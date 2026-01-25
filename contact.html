@@ -1,0 +1,73 @@
+---
+layout: default
+title: Contact
+---
+<div class="container contact-container">
+  <h1>Contact Us</h1>
+  <p class="contact-intro">Get in touch with the Alumni Association. We'd love to hear from you!</p>
+  
+  <div class="contact-form-wrapper">
+    <form id="contactForm" class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message"></span>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="membership">Membership</option>
+            <option value="events">Events</option>
+            <option value="donations">Donations</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-message"></span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <span class="error-message"></span>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Send Message</button>
+        <div class="form-status" id="formStatus"></div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="contact-info">
+    <div class="info-item">
+      <h3>Email</h3>
+      <p>alumni@iith.ac.in</p>
+    </div>
+    <div class="info-item">
+      <h3>Phone</h3>
+      <p>+91 40 2293 1234</p>
+    </div>
+    <div class="info-item">
+      <h3>Address</h3>
+      <p>Alumni Association Office<br>IIT Hyderabad<br>Kandi, Sangareddy District<br>Telangana 502285</p>
+    </div>
+  </div>
+</div>
