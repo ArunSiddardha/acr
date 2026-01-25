@@ -1,0 +1,115 @@
+---
+layout: default
+title: Contact
+---
+<div class="container-fluid">
+  <h1>Contact Us</h1>
+  <p class="lead">Get in touch with the Alumni Association</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Please provide your name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Please provide a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone">
+            <div class="invalid-feedback">Please provide a valid phone number</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select class="form-control" id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="membership">Membership Information</option>
+              <option value="events">Events & Reunions</option>
+              <option value="donations">Donations & Support</option>
+              <option value="technical">Technical Support</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please select a subject</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+            <div class="invalid-feedback">Please provide your message (minimum 10 characters)</div>
+          </div>
+          
+          <div class="form-group">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+              <label class="form-check-label" for="newsletter">
+                I would like to receive newsletter updates
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-secondary">Clear Form</button>
+          </div>
+        </form>
+        
+        <div id="successMessage" class="alert alert-success" style="display: none;">
+          <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+        </div>
+        
+        <div id="errorMessage" class="alert alert-danger" style="display: none;">
+          <strong>Error!</strong> There was a problem sending your message. Please try again later.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> alumni@example.com</p>
+        <p><strong>Phone:</strong> +91 12345 67890</p>
+        <p><strong>Address:</strong><br>
+        Alumni Association Office<br>
+        Indian Institute of Technology Hyderabad<br>
+        Kandi, Sangareddy District<br>
+        Telangana 502285, India</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="office-hours">
+        <h3>Office Hours</h3>
+        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+        <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM</p>
+        <p><strong>Sunday:</strong> Closed</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <p>Connect with us on social media for updates and news.</p>
+        <div class="social-icons">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
