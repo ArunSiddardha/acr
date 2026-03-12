@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes — Local, Fast, Offline</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Notes</h1>
+    <div class="actions">
+      <button id="newNoteBtn" title="Create a new note (N)">New</button>
+      <button id="exportBtn" title="Export notes to JSON">Export</button>
+      <label class="import-label" title="Import notes from JSON">
+        <input id="importInput" type="file" accept="application/json" hidden />
+        <span>Import</span>
+      </label>
+      <input id="searchInput" type="search" placeholder="Search…" aria-label="Search notes" />
+      <select id="sortSelect" aria-label="Sort notes">
+        <option value="updated">Updated</option>
+        <option value="created">Created</option>
+        <option value="title">Title</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Notes list">
+      <ul id="notesList" class="notes-list"></ul>
+    </aside>
+
+    <section class="editor" aria-label="Editor">
+      <div class="editor-header">
+        <input id="titleInput" type="text" placeholder="Untitled" />
+        <div class="editor-actions">
+          <button id="pinBtn" title="Pin/Unpin note">Pin</button>
+          <button id="deleteBtn" class="danger" title="Delete note">Delete</button>
+        </div>
+      </div>
+      <textarea id="contentInput" placeholder="Write your note here…"></textarea>
+      <div class="statusbar" id="statusBar">Ready.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
